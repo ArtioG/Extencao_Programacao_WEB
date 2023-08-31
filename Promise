@@ -1,0 +1,33 @@
+Promises
+
+Promises são um recurso crucial no JavaScript para lidar com operações assíncronas de maneira mais organizada e legível. Elas permitem que você trate operações que levam tempo, como chamadas de API, manipulação de arquivos e consultas a bancos de dados, de uma forma mais síncrona, evitando o aninhamento excessivo de callbacks.
+
+Descrição:
+Uma Promise é um objeto que representa um valor que pode estar disponível agora, no futuro ou nunca. Ela possui três estados possíveis: "pending" (pendente), "fulfilled" (cumprida) e "rejected" (rejeitada). Uma Promise é usada para encapsular um valor ou erro que pode não estar disponível imediatamente.
+
+Exemplo de Uso:
+// Exemplo de Promise simples que simula uma operação assíncrona
+const promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    const randomValue = Math.random();
+    if (randomValue > 0.5) {
+      resolve(randomValue);  // A operação foi bem-sucedida
+    } else {
+      reject(new Error("Valor muito baixo"));  // A operação falhou
+    }
+  }, 1000);
+});
+
+// Usando a Promise
+promise
+  .then(result => {
+    console.log("Sucesso:", result);
+  })
+  .catch(error => {
+    console.error("Erro:", error);
+  });
+Neste exemplo, a Promise simula uma operação assíncrona que retorna um valor aleatório. Se o valor for maior que 0.5, a Promise é cumprida (resolved) com o valor. Caso contrário, é rejeitada (rejected) com um erro.
+
+As Promises também podem ser encadeadas usando o método .then() para tratar o valor resolvido e o método .catch() para lidar com erros.
+
+Promises facilitam o controle de fluxo em operações assíncronas e podem ser usadas em conjunto com outras funcionalidades, como async/await, para escrever um código mais legível e estruturado quando se trabalha com lógica assíncrona.
