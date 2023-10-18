@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Marcação de Consulta</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Formulário de Marcação de Consulta</h2>
+
+<form id="consultaForm" onsubmit="return validateForm()">
+    <!-- Seção de dados pessoais -->
+    <h3>Dados Pessoais</h3>
+    <label for="nomeCompleto">Nome Completo:</label>
+    <input type="text" id="nomeCompleto" name="nomeCompleto" required>
+
+    <label for="cpf">CPF:</label>
+    <input type="text" id="cpf" name="cpf" required>
+
+    <label for="dataNascimento">Data de Nascimento:</label>
+    <input type="date" id="dataNascimento" name="dataNascimento" required>
+
+    <label for="endereco">Endereço:</label>
+    <input type="text" id="endereco" name="endereco" required>
+
+    <label for="uf">UF:</label>
+    <input type="text" id="uf" name="uf" required>
+
+    <label for="cep">CEP:</label>
+    <input type="text" id="cep" name="cep" required>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="telefone">Telefone:</label>
+    <input type="tel" id="telefone" name="telefone" required>
+
+    <!-- Seção de dados da consulta -->
+    <h3>Dados da Consulta</h3>
+    <label for="especialidade">Especialidade Médica:</label>
+    <select id="especialidade" name="especialidade" required>
+        <option value="">Selecione uma especialidade</option>
+        <option value="cardiologia">Cardiologia</option>
+        <option value="dermatologia">Dermatologia</option>
+        <!-- Adicione outras especialidades conforme necessário -->
+    </select>
+
+    <label for="dataHora">Data e Hora da Consulta:</label>
+    <input type="datetime-local" id="dataHora" name="dataHora" required>
+
+    <label for="medicamentos">Medicamentos Alergicos:</label>
+    <select id="medicamentos" name="medicamentos" multiple>
+        <option value="antibioticos">Antibióticos</option>
+        <option value="antiinflamatorios">Anti-inflamatórios</option>
+        <!-- Adicione outros medicamentos conforme necessário -->
+    </select>
+
+    <label for="infoAdicionais">Informações Adicionais:</label>
+    <textarea id="infoAdicionais" name="infoAdicionais" rows="4"></textarea>
+
+    <button type="submit">Agendar Consulta</button>
+</form>
+
+<script>
+    function validateForm() {
+        var form = document.getElementById("consultaForm");
+        var elements = form.elements;
+        var isValid = true;
+
+        for (var i = 0; i < elements.length; i++) {
+            if (elements[i].type !== "submit" && elements[i].type !== "button") {
+                if (elements[i].value.trim() === "") {
+                    alert("Por favor, preencha todos os campos.");
+                    isValid = false;
+                    break;
+                }
+            }
+        }
+
+        return isValid;
+    }
+</script>
+
+</body>
+</html>
