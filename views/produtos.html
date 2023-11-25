@@ -1,0 +1,332 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Produtos</title>
+</head>
+<body>
+    <h1>Lista de Produtos</h1>
+    <ul>
+        {{#products}}
+            <li>
+                {{productName}} - R$ {{productValue}}
+                <form action="/deletarProduto" method="post" style="display:inline;">
+                    <input type="hidden" name="productId" value="{{id}}">
+                    <button type="submit">Deletar</button>
+                </form>
+                <form action="/alterarProduto" method="get" style="display:inline;">
+                    <input type="hidden" name="productId" value="{{id}}">
+                    <button type="submit">Alterar Valor</button>
+                </form>
+            </li>
+        {{/products}}
+    </ul>
+    <p><a href="/cadastroProduto">Cadastrar Novo Produto</a></p>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Lista de Produtos</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4">Lista de Produtos</h1>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Produto</th>
+                        <th scope="col">Valor</th>
+                        <th scope="col">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#products}}
+                        <tr>
+                            <td>{{productName}}</td>
+                            <td>R$ {{productValue}}</td>
+                            <td>
+                                <form action="/deletarProduto" method="post" style="display:inline;">
+                                    <input type="hidden" name="productId" value="{{id}}">
+                                    <button type="submit" class="btn btn-danger btn-sm">Deletar</button>
+                                </form>
+                                <form action="/alterarProduto" method="get" style="display:inline;">
+                                    <input type="hidden" name="productId" value="{{id}}">
+                                    <button type="submit" class="btn btn-primary btn-sm">Alterar Valor</button>
+                                </form>
+                            </td>
+                        </tr>
+                    {{/products}}
+                </tbody>
+            </table>
+        </div>
+        <p class="mt-3"><a href="/cadastroProduto" class="btn btn-success">Cadastrar Novo Produto</a></p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Lista de Produtos</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="mb-4">Lista de Produtos</h1>
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Produto</th>
+                    <th scope="col">Valor</th>
+                    <th scope="col">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#products}}
+                    <tr>
+                        <td>{{productName}}</td>
+                        <td>R$ {{productValue}}</td>
+                        <td>
+                            <form action="/deletarProduto" method="post" style="display:inline;">
+                                <input type="hidden" name="productId" value="{{id}}">
+                                <button type="submit" class="btn btn-danger btn-sm">Deletar</button>
+                            </form>
+                            <form action="/alterarProduto" method="get" style="display:inline;">
+                                <input type="hidden" name="productId" value="{{id}}">
+                                <button type="submit" class="btn btn-primary btn-sm">Alterar Valor</button>
+                            </form>
+                        </td>
+                    </tr>
+                {{/products}}
+            </tbody>
+        </table>
+    </div>
+    <p class="mt-3"><a href="/cadastroProduto" class="btn btn-success">Cadastrar Novo Produto</a></p>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Lista de Produtos</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .table th, .table td {
+            text-align: center;
+            padding: 0.75rem;
+        }
+
+        .btn {
+            border-radius: 4px;
+            margin-right: 5px;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+
+        .btn-success {
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="mb-4">Lista de Produtos</h1>
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Produto</th>
+                    <th scope="col">Valor</th>
+                    <th scope="col">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#products}}
+                    <tr>
+                        <td>{{productName}}</td>
+                        <td>R$ {{productValue}}</td>
+                        <td>
+                            <form action="/deletarProduto" method="post" style="display:inline;">
+                                <input type="hidden" name="productId" value="{{id}}">
+                                <button type="submit" class="btn btn-danger btn-sm">Deletar</button>
+                            </form>
+                            <form action="/alterarProduto" method="get" style="display:inline;">
+                                <input type="hidden" name="productId" value="{{id}}">
+                                <button type="submit" class="btn btn-primary btn-sm">Alterar Valor</button>
+                            </form>
+                        </td>
+                    </tr>
+                {{/products}}
+            </tbody>
+        </table>
+    </div>
+    <p class="mt-3"><a href="/cadastroProduto" class="btn btn-success">Cadastrar Novo Produto</a></p>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Lista de Produtos</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Roboto', sans-serif;
+            color: #495057;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .table th, .table td {
+            text-align: center;
+            padding: 1rem; /* Increased padding for better spacing */
+        }
+
+        .table thead th {
+            background-color: #343a40; /* Dark background for header */
+            color: #ffffff; /* White text for header */
+        }
+
+        .table tbody tr:nth-child(even) {
+            background-color: #f8f9fa; /* Alternating row background color */
+        }
+
+        .btn {
+            border-radius: 4px;
+            margin-right: 5px;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+
+        .btn-success {
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="mb-4">Lista de Produtos</h1>
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Produto</th>
+                    <th scope="col">Valor</th>
+                    <th scope="col">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#products}}
+                    <tr>
+                        <td>{{productName}}</td>
+                        <td>R$ {{productValue}}</td>
+                        <td>
+                            <form action="/deletarProduto" method="post" style="display:inline;">
+                                <input type="hidden" name="productId" value="{{id}}">
+                                <button type="submit" class="btn btn-danger btn-sm">Deletar</button>
+                            </form>
+                            <form action="/alterarProduto" method="get" style="display:inline;">
+                                <input type="hidden" name="productId" value="{{id}}">
+                                <button type="submit" class="btn btn-primary btn-sm">Alterar Valor</button>
+                            </form>
+                        </td>
+                    </tr>
+                {{/products}}
+            </tbody>
+        </table>
+    </div>
+    <p class="mt-3"><a href="/cadastroProduto" class="btn btn-success">Cadastrar Novo Produto</a></p>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cd
+

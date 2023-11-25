@@ -1,0 +1,167 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Produto</title>
+</head>
+<body>
+    <h1>Alterar Valor do Produto</h1>
+    <form action="/salvarAlteracaoProduto" method="post">
+        <input type="hidden" name="productId" value="{{product.id}}">
+        <label for="newProductValue">Novo Valor do Produto:</label>
+        <input type="text" id="newProductValue" name="newProductValue" value="{{product.productValue}}" required><br>
+        <button type="submit">Salvar Alteração</button>
+    </form>
+    <p><a href="/produtos">Voltar para Lista de Produtos</a></p>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Alterar Produto</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4">Alterar Valor do Produto</h1>
+        <form action="/salvarAlteracaoProduto" method="post">
+            <input type="hidden" name="productId" value="{{product.id}}">
+            <div class="form-group">
+                <label for="newProductValue">Novo Valor do Produto:</label>
+                <input type="text" class="form-control" id="newProductValue" name="newProductValue" value="{{product.productValue}}" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Salvar Alteração</button>
+        </form>
+        <p class="mt-3"><a href="/produtos" class="btn btn-secondary">Voltar para Lista de Produtos</a></p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Alterar Produto</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .custom-container {
+            background-color: #ffffff; 
+            border-radius: 10px; 
+            padding: 20px;
+            margin-top: 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+        }
+    </style>
+</head>
+<body>
+    <div class="container-sm custom-container">
+        <h1 class="mb-4">Alterar Valor do Produto</h1>
+        <form action="/salvarAlteracaoProduto" method="post">
+            <input type="hidden" name="productId" value="{{product.id}}">
+            <div class="form-group">
+                <label for="newProductValue">Novo Valor do Produto:</label>
+                <input type="text" class="form-control" id="newProductValue" name="newProductValue" value="{{product.productValue}}" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Salvar Alteração</button>
+        </form>
+        <p class="mt-3"><a href="/produtos" class="btn btn-secondary">Voltar para Lista de Produtos</a></p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
+ -->
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Alterar Produto</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .custom-container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 30px;
+            margin-top: 50px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input.form-control {
+            border-radius: 8px;
+        }
+
+        button.btn {
+            border-radius: 8px;
+        }
+
+        a.btn-secondary {
+            border-radius: 8px;
+        }
+
+        a.btn-secondary:hover {
+            background-color: #6c757d; /* Change hover color if desired */
+        }
+
+        h1 {
+            color: #007bff; /* Change header color if desired */
+        }
+    </style>
+</head>
+<body>
+    <div class="container-sm custom-container">
+        <h1 class="mb-4">Alterar Valor do Produto</h1>
+        <form action="/salvarAlteracaoProduto" method="post">
+            <input type="hidden" name="productId" value="{{product.id}}">
+            <div class="form-group">
+                <label for="newProductValue">Novo Valor do Produto:</label>
+                <input type="text" class="form-control" id="newProductValue" name="newProductValue" value="{{product.productValue}}" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Salvar Alteração</button>
+        </form>
+        <p class="mt-3"><a href="/produtos" class="btn btn-secondary">Voltar para Lista de Produtos</a></p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
